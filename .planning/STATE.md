@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 04-03-PLAN.md — BalanceTrendChart and SpendingPieChart implemented; 2 new chart components GREEN
-last_updated: "2026-04-04T18:45:43.473Z"
+stopped_at: Completed 04-04-PLAN.md — full dashboard assembled and browser-verified; InsightsPanel + DashboardPage implemented
+last_updated: "2026-04-04T19:13:50.017Z"
 last_activity: "2026-04-04 — Plan 02-01 complete: Zustand+Immer installed, jsdom env enabled, 5 TDD test stub files in RED state"
 progress:
   total_phases: 6
-  completed_phases: 3
+  completed_phases: 4
   total_plans: 14
-  completed_plans: 13
+  completed_plans: 14
   percent: 17
 ---
 
@@ -62,6 +62,7 @@ Progress: [█░░░░░░░░░] 17%
 | Phase 04-dashboard P01 | 6 | 2 tasks | 4 files |
 | Phase 04-dashboard P02 | 2 | 2 tasks | 3 files |
 | Phase 04-dashboard P03 | 1 | 2 tasks | 3 files |
+| Phase 04-dashboard P04 | 15 | 3 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -104,6 +105,9 @@ Recent decisions affecting current work:
 - [Phase 04-dashboard]: 04-02: highestCategory.name uses raw category key (not getCategoryMeta().label) — test asserts 'housing' not 'Housing'
 - [Phase 04-dashboard]: 04-02: incomeExpenseRatio returns null (not 0) when totalExpenses === 0 — callers can distinguish no-data from zero ratio
 - [Phase 04-dashboard]: useMemo computes cumulative balance from per-month net — not passed directly to Recharts; Cell fill uses CSS variables for dark mode support
+- [Phase 04-dashboard]: InsightsPanel receives Transaction[] as props (not store hook) — keeps component pure and testable
+- [Phase 04-dashboard]: DashboardPage restricts store access to two approved hooks only — enforces single-entry-point discipline
+- [Phase 04-dashboard]: useMemo used for chartData and categoryData in DashboardPage — prevents unnecessary recalculation on render
 
 ### Pending Todos
 
@@ -117,6 +121,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-04T18:45:43.469Z
-Stopped at: Completed 04-03-PLAN.md — BalanceTrendChart and SpendingPieChart implemented; 2 new chart components GREEN
+Last session: 2026-04-04T19:13:50.013Z
+Stopped at: Completed 04-04-PLAN.md — full dashboard assembled and browser-verified; InsightsPanel + DashboardPage implemented
 Resume file: None
