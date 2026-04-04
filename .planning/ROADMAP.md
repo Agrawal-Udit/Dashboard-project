@@ -12,7 +12,7 @@ This roadmap builds the Finance Dashboard from the ground up in six phases, orde
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - Types, mock data, and utility functions — the data contract everything else depends on
+- [x] **Phase 1: Foundation** - Types, mock data, and utility functions — the data contract everything else depends on (completed 2026-04-04)
 - [ ] **Phase 2: State Layer** - Zustand slices, persist middleware, and selector hooks
 - [ ] **Phase 3: Layout Shell** - App frame, dark mode theming, role switcher, and shared UI primitives
 - [ ] **Phase 4: Dashboard** - KPI cards, time-series chart, categorical chart, and insights panel
@@ -108,7 +108,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 2/3 | In Progress|  |
+| 1. Foundation | 3/3 | Complete   | 2026-04-04 |
 | 2. State Layer | 0/TBD | Not started | - |
 | 3. Layout Shell | 0/TBD | Not started | - |
 | 4. Dashboard | 0/TBD | Not started | - |

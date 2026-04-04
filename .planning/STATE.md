@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: planning
-stopped_at: Roadmap created — ROADMAP.md, STATE.md written; REQUIREMENTS.md traceability updated
-last_updated: "2026-04-04T05:11:01.595Z"
-last_activity: 2026-04-03 — Roadmap created, all 26 v1 requirements mapped to 6 phases
+status: executing
+stopped_at: Completed 01-03-PLAN.md — financeUtils and dateUtils pure utility functions, all 28 Phase 1 tests GREEN, Phase 1 Foundation complete
+last_updated: "2026-04-04T05:21:33.233Z"
+last_activity: "2026-04-04 — Plan 01-02 complete: Transaction type contract, Category constants, 28 seed transactions"
 progress:
   total_phases: 6
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 3
-  completed_plans: 2
+  completed_plans: 3
   percent: 67
 ---
 
@@ -50,6 +50,7 @@ Progress: [██████░░░░] 67%
 - Trend: Fast execution — data contract plans execute quickly when types are pre-specified
 
 *Updated after each plan completion*
+| Phase 01 P03 | 3 | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -67,6 +68,8 @@ Recent decisions affecting current work:
 - 01-02: String literal unions used for TransactionType and Category (no enums — JSON round-trip safety)
 - 01-02: MOCK_TRANSACTIONS uses fixed ids txn-001 through txn-028 (deterministic for test stability)
 - 01-02: amount field always positive — sign semantics live in type field ('income'|'expense')
+- [Phase 01]: yyyy-MM format used as ChartDataPoint.date key — MMM yyyy fails lexicographic sort test for month names (F < J alphabetically but Feb follows Jan chronologically)
+- [Phase 01]: formatChartData balance is per-month net — cumulative running balance computed by Phase 2 chart selector hook
 
 ### Pending Todos
 
@@ -80,6 +83,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-04
-Stopped at: Completed 01-02-PLAN.md — Transaction types, Category constants, 28 seed transactions (mockData tests GREEN)
+Last session: 2026-04-04T05:21:33.228Z
+Stopped at: Completed 01-03-PLAN.md — financeUtils and dateUtils pure utility functions, all 28 Phase 1 tests GREEN, Phase 1 Foundation complete
 Resume file: None
