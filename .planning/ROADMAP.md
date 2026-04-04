@@ -31,7 +31,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. formatCurrency and formatDate utilities return correctly formatted output for valid inputs and edge cases (zero, negative, missing values)
   4. groupByCategory and calcTotals return correct aggregates when run against the seed dataset
   5. formatChartData utility normalizes transaction arrays into chart-ready shapes with no missing keys (Recharts crash prevention verified)
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Vite scaffold, test infra, and failing test stubs (Wave 0 — RED state)
+- [ ] 01-02-PLAN.md — Transaction type, Category constants, and 25-30 seed transactions
+- [ ] 01-03-PLAN.md — Pure utility functions: formatCurrency, formatDate, calcTotals, groupByCategory, formatChartData
 
 ### Phase 2: State Layer
 **Goal**: All application state is owned by Zustand slices with persist middleware configured correctly from day one — components can subscribe to transactions, role, and dark mode without importing raw store state
@@ -103,7 +108,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/TBD | Not started | - |
+| 1. Foundation | 0/3 | In progress | - |
 | 2. State Layer | 0/TBD | Not started | - |
 | 3. Layout Shell | 0/TBD | Not started | - |
 | 4. Dashboard | 0/TBD | Not started | - |
