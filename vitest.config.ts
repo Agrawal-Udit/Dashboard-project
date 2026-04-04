@@ -2,13 +2,19 @@ import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
   test: {
-    environment: 'node',
+    environment: 'jsdom',
     globals: true,
     setupFiles: ['./src/setupTests.ts'],
     coverage: {
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
-      include: ['src/utils/**', 'src/data/**', 'src/types/**'],
+      include: [
+        'src/utils/**',
+        'src/data/**',
+        'src/types/**',
+        'src/store/**',
+        'src/hooks/**',
+      ],
     },
   },
 })
