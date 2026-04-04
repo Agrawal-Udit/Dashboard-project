@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-04-PLAN.md — ROLE-02 browser verification passed; Phase 2 State Layer complete
-last_updated: "2026-04-04T09:56:56.501Z"
+stopped_at: Completed 03-01-PLAN.md — Tailwind v4 installed, CSS variable palette, FOWT script, 3 RED test stubs
+last_updated: "2026-04-04T14:22:14.804Z"
 last_activity: "2026-04-04 — Plan 02-01 complete: Zustand+Immer installed, jsdom env enabled, 5 TDD test stub files in RED state"
 progress:
   total_phases: 6
   completed_phases: 2
-  total_plans: 7
-  completed_plans: 7
+  total_plans: 10
+  completed_plans: 8
   percent: 17
 ---
 
@@ -56,6 +56,7 @@ Progress: [█░░░░░░░░░] 17%
 | Phase 02-state-layer P02 | 2 | 2 tasks | 2 files |
 | Phase 02-state-layer P03 | 4 | 2 tasks | 3 files |
 | Phase 02-state-layer P04 | 1 | 1 tasks | 0 files |
+| Phase 03-layout-shell P01 | 4 | 3 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -84,6 +85,10 @@ Recent decisions affecting current work:
 - [Phase 02-03]: useShallow used in both hooks to prevent infinite re-render loop with array selectors in Zustand v5 + React 19
 - [Phase 02-03]: Default sort in useTransactions is date descending (newest first) when no sortBy provided
 - [Phase 02-state-layer]: 02-04: localStorage key 'finance-dashboard-store' confirmed role+darkMode survive F5 reload; ROLE-02 satisfied; transactions absent confirming partialize correct
+- [Phase 03-layout-shell]: Tailwind v4 dark mode uses @custom-variant dark syntax — no tailwind.config.js or darkMode config needed
+- [Phase 03-layout-shell]: No postcss.config.js created — @tailwindcss/vite replaces PostCSS entirely in v4
+- [Phase 03-layout-shell]: FOWT script reads stored.state.darkMode because Zustand persist wraps state under state key in localStorage
+- [Phase 03-layout-shell]: CSS chart variables defined under html.dark (not .dark) because :root IS the html element — variables activate when ThemeSync adds class to document.documentElement
 
 ### Pending Todos
 
@@ -97,6 +102,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-04T09:16:12.427Z
-Stopped at: Completed 02-04-PLAN.md — ROLE-02 browser verification passed; Phase 2 State Layer complete
+Last session: 2026-04-04T14:22:14.798Z
+Stopped at: Completed 03-01-PLAN.md — Tailwind v4 installed, CSS variable palette, FOWT script, 3 RED test stubs
 Resume file: None

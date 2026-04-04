@@ -33,13 +33,13 @@
 
 ### Roles
 
-- [ ] **ROLE-01**: User can switch between Viewer and Admin roles via a dropdown or toggle in the header/navbar
+- [x] **ROLE-01**: User can switch between Viewer and Admin roles via a dropdown or toggle in the header/navbar
 - [x] **ROLE-02**: Selected role persists across page refresh (via localStorage through Zustand persist)
 
 ### Polish & UX
 
-- [ ] **UX-01**: User can toggle between light and dark mode; preference persists across refresh
-- [ ] **UX-02**: Dark mode correctly themes all chart colors (via CSS variables, not hardcoded hex)
+- [x] **UX-01**: User can toggle between light and dark mode; preference persists across refresh
+- [x] **UX-02**: Dark mode correctly themes all chart colors (via CSS variables, not hardcoded hex)
 - [ ] **UX-03**: User can export visible/filtered transactions as CSV
 - [ ] **UX-04**: User can export visible/filtered transactions as JSON
 - [ ] **UX-05**: UI has smooth animations/transitions on: card entrance, page navigation, modal open/close, and chart load
@@ -97,10 +97,10 @@
 | TXN-06 | Phase 5 | Pending |
 | TXN-07 | Phase 5 | Pending |
 | TXN-08 | Phase 5 | Pending |
-| ROLE-01 | Phase 3 | Pending |
+| ROLE-01 | Phase 3 | Complete |
 | ROLE-02 | Phase 2 | Complete |
-| UX-01 | Phase 3 | Pending |
-| UX-02 | Phase 3 | Pending |
+| UX-01 | Phase 3 | Complete |
+| UX-02 | Phase 3 | Complete |
 | UX-03 | Phase 6 | Pending |
 | UX-04 | Phase 6 | Pending |
 | UX-05 | Phase 6 | Pending |
