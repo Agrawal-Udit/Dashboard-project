@@ -3,8 +3,8 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: "Completed 05-04 Task 1 — TransactionsPage implemented; awaiting checkpoint:human-verify"
-last_updated: "2026-04-04T19:52:44.078Z"
+stopped_at: Completed 05-04-PLAN.md — all 8 TXN requirements human-verified, Phase 5 complete
+last_updated: "2026-04-04T20:18:24.056Z"
 last_activity: "2026-04-04 — Plan 02-01 complete: Zustand+Immer installed, jsdom env enabled, 5 TDD test stub files in RED state"
 progress:
   total_phases: 6
@@ -66,6 +66,7 @@ Progress: [█░░░░░░░░░] 17%
 | Phase 05-transactions P01 | 4 | 2 tasks | 4 files |
 | Phase 05-transactions P02 | 2 | 2 tasks | 2 files |
 | Phase 05-transactions P03 | 2 | 3 tasks | 3 files |
+| Phase 05-transactions P04 | 25 | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -122,6 +123,8 @@ Recent decisions affecting current work:
 - [Phase 05-transactions]: TransactionsPage is sole useAppStore importer among Phase 5 components — child components receive props only
 - [Phase 05-transactions]: key={editingTxn?.id ?? 'new'} on TransactionForm forces remount on add/edit switch — prevents stale form state
 - [Phase 05-transactions]: crypto.randomUUID() used for new transaction IDs — no import needed in browser/Node 20+
+- [Phase 05-transactions]: TransactionsPage is the sole useAppStore importer among Phase 5 components — all children receive props
+- [Phase 05-transactions]: key={editingTxn?.id ?? 'new'} on TransactionForm forces remount on add/edit mode switch — prevents stale form state
 
 ### Pending Todos
 
@@ -135,6 +138,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-04T19:52:31.556Z
-Stopped at: Completed 05-04 Task 1 — TransactionsPage implemented; awaiting checkpoint:human-verify
+Last session: 2026-04-04T20:18:24.051Z
+Stopped at: Completed 05-04-PLAN.md — all 8 TXN requirements human-verified, Phase 5 complete
 Resume file: None
