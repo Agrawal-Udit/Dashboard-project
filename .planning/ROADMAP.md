@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: State Layer** - Zustand slices, persist middleware, and selector hooks (completed 2026-04-04)
 - [x] **Phase 3: Layout Shell** - App frame, dark mode theming, role switcher, and shared UI primitives (completed 2026-04-04)
 - [x] **Phase 4: Dashboard** - KPI cards, time-series chart, categorical chart, and insights panel (completed 2026-04-04)
-- [ ] **Phase 5: Transactions** - Transaction list, filter/sort/search, and Admin add/edit forms
+- [x] **Phase 5: Transactions** - Transaction list, filter/sort/search, and Admin add/edit forms (completed 2026-04-04)
 - [ ] **Phase 6: Polish** - Export, animations, responsive audit, empty states, and final QA
 
 ## Phase Details
@@ -135,5 +135,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 2. State Layer | 4/4 | Complete   | 2026-04-04 |
 | 3. Layout Shell | 3/3 | Complete   | 2026-04-04 |
 | 4. Dashboard | 4/4 | Complete   | 2026-04-04 |
-| 5. Transactions | 3/4 | In Progress|  |
+| 5. Transactions | 4/4 | Complete   | 2026-04-04 |
 | 6. Polish | 0/TBD | Not started | - |

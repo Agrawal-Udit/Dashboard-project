@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 05-03-PLAN.md — TransactionTable (2 tests GREEN), TransactionFilters, TransactionForm (3 tests GREEN) implemented
-last_updated: "2026-04-04T19:49:31.178Z"
+stopped_at: "Completed 05-04 Task 1 — TransactionsPage implemented; awaiting checkpoint:human-verify"
+last_updated: "2026-04-04T19:52:44.078Z"
 last_activity: "2026-04-04 — Plan 02-01 complete: Zustand+Immer installed, jsdom env enabled, 5 TDD test stub files in RED state"
 progress:
   total_phases: 6
-  completed_phases: 4
+  completed_phases: 5
   total_plans: 18
-  completed_plans: 17
+  completed_plans: 18
   percent: 17
 ---
 
@@ -119,6 +119,9 @@ Recent decisions affecting current work:
 - [Phase 05-transactions]: Role type defined inline in RoleGate.tsx as Viewer|Admin — avoids circular import with uiSlice
 - [Phase 05-transactions]: TransactionForm uses single useState object with immutable spread update helper for field changes
 - [Phase 05-transactions]: TransactionFilters has no test stub — pure layout component verified by TypeScript compile check
+- [Phase 05-transactions]: TransactionsPage is sole useAppStore importer among Phase 5 components — child components receive props only
+- [Phase 05-transactions]: key={editingTxn?.id ?? 'new'} on TransactionForm forces remount on add/edit switch — prevents stale form state
+- [Phase 05-transactions]: crypto.randomUUID() used for new transaction IDs — no import needed in browser/Node 20+
 
 ### Pending Todos
 
@@ -132,6 +135,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-04T19:49:31.174Z
-Stopped at: Completed 05-03-PLAN.md — TransactionTable (2 tests GREEN), TransactionFilters, TransactionForm (3 tests GREEN) implemented
+Last session: 2026-04-04T19:52:31.556Z
+Stopped at: Completed 05-04 Task 1 — TransactionsPage implemented; awaiting checkpoint:human-verify
 Resume file: None
