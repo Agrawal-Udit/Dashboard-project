@@ -142,6 +142,16 @@ None — no external service configuration required.
 - `npx tsc --noEmit` exits 0 — type contract is clean
 - `npx vitest run src/data` exits 0 — mockData contract is verified
 
+## Self-Check: PASSED
+
+- src/types/index.ts: FOUND
+- src/constants/categories.ts: FOUND
+- src/data/mockData.ts: FOUND
+- .planning/phases/01-foundation/01-02-SUMMARY.md: FOUND
+- Commit f0e4eed (Task 1 — types + categories): FOUND
+- Commit 47aa1de (Task 2 — mockData): FOUND
+- Commit 8515071 (docs — SUMMARY + STATE + ROADMAP): FOUND
+
 ---
 *Phase: 01-foundation*
 *Completed: 2026-04-04*
