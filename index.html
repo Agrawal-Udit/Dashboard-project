@@ -4,7 +4,17 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>vite-scaffold</title>
+    <title>Finance Dashboard</title>
+    <script>
+      (function() {
+        try {
+          var stored = JSON.parse(localStorage.getItem('finance-dashboard-store') || '{}');
+          if (stored.state && stored.state.darkMode === true) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
