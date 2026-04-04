@@ -10,8 +10,8 @@
 - [x] **FOUND-01**: Application has a TypeScript Transaction type with fields: id, date, amount, category, type (income|expense), description
 - [x] **FOUND-02**: Application ships with 25-30 mock seed transactions spanning at least 3 months, covering multiple categories and both income/expense types
 - [x] **FOUND-03**: Utility functions exist for formatCurrency, formatDate, groupByCategory, and calcTotals (balance, income, expenses)
-- [ ] **FOUND-04**: Zustand store has a transactions slice with CRUD operations (add, edit, delete) and a UI slice with role and darkMode state
-- [ ] **FOUND-05**: Zustand store uses persist middleware with version, migrate, and partialize configured from initialization
+- [x] **FOUND-04**: Zustand store has a transactions slice with CRUD operations (add, edit, delete) and a UI slice with role and darkMode state
+- [x] **FOUND-05**: Zustand store uses persist middleware with version, migrate, and partialize configured from initialization
 
 ### Dashboard
 
@@ -34,7 +34,7 @@
 ### Roles
 
 - [ ] **ROLE-01**: User can switch between Viewer and Admin roles via a dropdown or toggle in the header/navbar
-- [ ] **ROLE-02**: Selected role persists across page refresh (via localStorage through Zustand persist)
+- [x] **ROLE-02**: Selected role persists across page refresh (via localStorage through Zustand persist)
 
 ### Polish & UX
 
@@ -83,8 +83,8 @@
 | FOUND-01 | Phase 1 | Complete |
 | FOUND-02 | Phase 1 | Complete |
 | FOUND-03 | Phase 1 | Complete |
-| FOUND-04 | Phase 2 | Pending |
-| FOUND-05 | Phase 2 | Pending |
+| FOUND-04 | Phase 2 | Complete |
+| FOUND-05 | Phase 2 | Complete |
 | DASH-01 | Phase 4 | Pending |
 | DASH-02 | Phase 4 | Pending |
 | DASH-03 | Phase 4 | Pending |
@@ -98,7 +98,7 @@
 | TXN-07 | Phase 5 | Pending |
 | TXN-08 | Phase 5 | Pending |
 | ROLE-01 | Phase 3 | Pending |
-| ROLE-02 | Phase 2 | Pending |
+| ROLE-02 | Phase 2 | Complete |
 | UX-01 | Phase 3 | Pending |
 | UX-02 | Phase 3 | Pending |
 | UX-03 | Phase 6 | Pending |
