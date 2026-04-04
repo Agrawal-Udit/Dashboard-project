@@ -35,3 +35,13 @@ html.dark {
   --chart-color-10: #fb923c;
   --chart-color-11: #cbd5e1;
 }
+
+/* Recharts axis and grid — SVG inline attr resolved via CSS variable */
+:root {
+  --recharts-tick-color: #6b7280;
+  --recharts-grid-color: #e5e7eb;
+}
+html.dark {
+  --recharts-tick-color: #9ca3af;
+  --recharts-grid-color: #374151;
+}
