@@ -83,7 +83,13 @@ Plans:
   3. User can see a categorical chart (pie or donut) showing spending breakdown by category with correct proportions and labeled segments
   4. User can see an insights section displaying: the highest spending category by amount, a month-over-month comparison (e.g., "Expenses up 12% vs last month"), and at least one additional observation — all values are free of NaN and Infinity even on edge-case data
   5. All dashboard charts and cards display a meaningful empty state when the transaction store is empty rather than a blank or broken layout
-**Plans**: TBD
+**Plans**: 4 plans
+
+Plans:
+- [ ] 04-01-PLAN.md — Wave 0 RED test stubs: insightsUtils (7 cases), KpiCard (4 cases), BalanceTrendChart (1 case), SpendingPieChart (1 case)
+- [ ] 04-02-PLAN.md — calcInsights pure utility + KpiCard component + EmptyState component (Wave 2)
+- [ ] 04-03-PLAN.md — BalanceTrendChart (AreaChart, cumulative balance, custom tooltip) + SpendingPieChart (PieChart donut) + CSS variables (Wave 3)
+- [ ] 04-04-PLAN.md — InsightsPanel + DashboardPage assembly + browser verification checkpoint (Wave 4)
 
 ### Phase 5: Transactions
 **Goal**: The transactions page is fully functional — users can view, filter, sort, and search the full transaction list, and Admin users can add and edit transactions via a validated form
@@ -122,6 +128,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 1. Foundation | 3/3 | Complete    | 2026-04-04 |
 | 2. State Layer | 4/4 | Complete   | 2026-04-04 |
 | 3. Layout Shell | 3/3 | Complete   | 2026-04-04 |
-| 4. Dashboard | 0/TBD | Not started | - |
+| 4. Dashboard | 0/4 | Not started | - |
 | 5. Transactions | 0/TBD | Not started | - |
 | 6. Polish | 0/TBD | Not started | - |
