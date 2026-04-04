@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: "Completed 05-01-PLAN.md — four TDD RED stub files created: validateTransactionForm (8 tests), RoleGate (3 tests), TransactionForm (3 tests), TransactionTable (2 tests)"
-last_updated: "2026-04-04T19:40:05.320Z"
+stopped_at: Completed 05-02-PLAN.md — validateTransactionForm (8 tests GREEN) and RoleGate (3 tests GREEN) implemented
+last_updated: "2026-04-04T19:44:41.746Z"
 last_activity: "2026-04-04 — Plan 02-01 complete: Zustand+Immer installed, jsdom env enabled, 5 TDD test stub files in RED state"
 progress:
   total_phases: 6
   completed_phases: 4
   total_plans: 18
-  completed_plans: 15
+  completed_plans: 16
   percent: 17
 ---
 
@@ -64,6 +64,7 @@ Progress: [█░░░░░░░░░] 17%
 | Phase 04-dashboard P03 | 1 | 2 tasks | 3 files |
 | Phase 04-dashboard P04 | 15 | 3 tasks | 2 files |
 | Phase 05-transactions P01 | 4 | 2 tasks | 4 files |
+| Phase 05-transactions P02 | 2 | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -112,6 +113,9 @@ Recent decisions affecting current work:
 - [Phase 05-01]: TransactionForm submit test uses fireEvent (not userEvent) as fallback — @testing-library/user-event not confirmed installed
 - [Phase 05-01]: RoleGate role-change test uses act() + rerender() to match established store test idiom from Phase 2
 - [Phase 05-01]: TransactionForm add mode test uses queryAllByText(/add/i) — decoupled from exact DOM structure before Plan 03 implementation
+- [Phase 05-transactions]: Calendar date validation uses new Date() + toISOString round-trip — rejects month 13 and other impossible calendar dates without a date library
+- [Phase 05-transactions]: RoleGate returns null (not empty fragment) when role not allowed — lets parent use natural conditional rendering
+- [Phase 05-transactions]: Role type defined inline in RoleGate.tsx as Viewer|Admin — avoids circular import with uiSlice
 
 ### Pending Todos
 
@@ -125,6 +129,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-04T19:40:05.316Z
-Stopped at: Completed 05-01-PLAN.md — four TDD RED stub files created: validateTransactionForm (8 tests), RoleGate (3 tests), TransactionForm (3 tests), TransactionTable (2 tests)
+Last session: 2026-04-04T19:44:41.740Z
+Stopped at: Completed 05-02-PLAN.md — validateTransactionForm (8 tests GREEN) and RoleGate (3 tests GREEN) implemented
 Resume file: None
