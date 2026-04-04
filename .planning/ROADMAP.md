@@ -104,7 +104,13 @@ Plans:
   6. Admin user can open an add-transaction form, fill in all fields with validation feedback, submit, and see the new transaction appear in the list
   7. Admin user can click edit on any existing transaction, modify fields, and see the updated values reflected immediately
   8. Viewer user does not see the add or edit controls anywhere in the transactions view (role-gated via RoleGate component)
-**Plans**: TBD
+**Plans**: 4 plans
+
+Plans:
+- [ ] 05-01-PLAN.md — Wave 0 RED test stubs: transactionFormValidation (8 cases), RoleGate (3 cases), TransactionForm (3 cases), TransactionTable (2 cases)
+- [ ] 05-02-PLAN.md — validateTransactionForm pure utility + RoleGate component (Wave 2)
+- [ ] 05-03-PLAN.md — TransactionTable + TransactionFilters + TransactionForm UI components (Wave 3)
+- [ ] 05-04-PLAN.md — TransactionsPage assembly + browser verification checkpoint (Wave 4)
 
 ### Phase 6: Polish
 **Goal**: The application is submission-ready — CSV/JSON export works, all data surfaces have empty states, entrance animations play on load, the layout is verified usable at 375px/768px/1280px, and a final QA pass confirms no regressions
@@ -129,5 +135,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 2. State Layer | 4/4 | Complete   | 2026-04-04 |
 | 3. Layout Shell | 3/3 | Complete   | 2026-04-04 |
 | 4. Dashboard | 4/4 | Complete   | 2026-04-04 |
-| 5. Transactions | 0/TBD | Not started | - |
+| 5. Transactions | 0/4 | Not started | - |
 | 6. Polish | 0/TBD | Not started | - |
