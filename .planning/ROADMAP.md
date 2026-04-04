@@ -128,6 +128,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 1. Foundation | 3/3 | Complete    | 2026-04-04 |
 | 2. State Layer | 4/4 | Complete   | 2026-04-04 |
 | 3. Layout Shell | 3/3 | Complete   | 2026-04-04 |
-| 4. Dashboard | 2/4 | In Progress|  |
+| 4. Dashboard | 3/4 | In Progress|  |
 | 5. Transactions | 0/TBD | Not started | - |
 | 6. Polish | 0/TBD | Not started | - |

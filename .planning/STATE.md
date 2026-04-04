@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 04-02-PLAN.md — calcInsights, KpiCard, EmptyState implemented; 11 new tests GREEN
-last_updated: "2026-04-04T18:41:26.601Z"
+stopped_at: Completed 04-03-PLAN.md — BalanceTrendChart and SpendingPieChart implemented; 2 new chart components GREEN
+last_updated: "2026-04-04T18:45:43.473Z"
 last_activity: "2026-04-04 — Plan 02-01 complete: Zustand+Immer installed, jsdom env enabled, 5 TDD test stub files in RED state"
 progress:
   total_phases: 6
   completed_phases: 3
   total_plans: 14
-  completed_plans: 12
+  completed_plans: 13
   percent: 17
 ---
 
@@ -61,6 +61,7 @@ Progress: [█░░░░░░░░░] 17%
 | Phase 03-layout-shell P03 | 2 | 2 tasks | 6 files |
 | Phase 04-dashboard P01 | 6 | 2 tasks | 4 files |
 | Phase 04-dashboard P02 | 2 | 2 tasks | 3 files |
+| Phase 04-dashboard P03 | 1 | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -102,6 +103,7 @@ Recent decisions affecting current work:
 - [Phase 04-dashboard]: 04-01: src/components/dashboard/__tests__/ directory created; txn() helper uses Partial<Transaction> & { type } pattern; KpiCard colorClass test uses container.querySelector to avoid coupling to DOM structure
 - [Phase 04-dashboard]: 04-02: highestCategory.name uses raw category key (not getCategoryMeta().label) — test asserts 'housing' not 'Housing'
 - [Phase 04-dashboard]: 04-02: incomeExpenseRatio returns null (not 0) when totalExpenses === 0 — callers can distinguish no-data from zero ratio
+- [Phase 04-dashboard]: useMemo computes cumulative balance from per-month net — not passed directly to Recharts; Cell fill uses CSS variables for dark mode support
 
 ### Pending Todos
 
@@ -115,6 +117,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-04T18:41:26.596Z
-Stopped at: Completed 04-02-PLAN.md — calcInsights, KpiCard, EmptyState implemented; 11 new tests GREEN
+Last session: 2026-04-04T18:45:43.469Z
+Stopped at: Completed 04-03-PLAN.md — BalanceTrendChart and SpendingPieChart implemented; 2 new chart components GREEN
 Resume file: None
