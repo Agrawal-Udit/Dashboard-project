@@ -43,15 +43,17 @@ decisions:
 metrics:
   duration: "2 minutes"
   completed_date: "2026-04-04"
-  tasks_completed: 2
+  tasks_completed: 3
   tasks_total: 3
   files_created: 5
   files_modified: 1
+
+requirements-completed: [ROLE-01, UX-01, UX-02]
 ---
 
 # Phase 3 Plan 03: App Shell — Header, Sidebar, AppLayout, Routing Summary
 
-**One-liner:** Full app shell with responsive sidebar, role-switcher + disclaimer, dark-mode toggle, and React Router routes — all 17 component tests GREEN.
+**One-liner:** Full app shell with responsive sidebar, role-switcher + disclaimer, dark-mode toggle, and React Router routes — all 17 component tests GREEN and all 5 browser checks approved.
 
 ## What Was Built
 
@@ -80,14 +82,17 @@ Wave 2 of Phase 3 completes the app shell:
 
 `npm run build` exits zero — 1745 modules transformed, 253.95 kB JS bundle, 21.64 kB CSS bundle.
 
-## Awaiting Checkpoint
+## Browser Verification (Task 3) — APPROVED
 
-Task 3 is a `checkpoint:human-verify` — the user must visually verify the running app:
-- Role switcher with disclaimer visible and functional
-- Dark mode toggle works; no FOWT on hard refresh
-- CSS variables visible in DevTools
-- Navigation between Dashboard and Transactions
-- Responsive sidebar collapse at 375px width
+User confirmed all 5 checks on 2026-04-04:
+
+| Check | Requirement | Result |
+|-------|-------------|--------|
+| Role switcher with disclaimer visible | ROLE-01 | PASSED |
+| Dark mode toggles entire UI and persists across F5 | UX-01 | PASSED |
+| CSS variables (:root and html.dark) visible in DevTools | UX-02 | PASSED |
+| Navigation between Dashboard and Transactions | Navigation | PASSED |
+| Responsive sidebar collapses at 375px with hamburger overlay | Responsive | PASSED |
 
 ## Deviations from Plan
 
@@ -104,5 +109,9 @@ None — plan executed exactly as written.
 | src/pages/TransactionsPage.tsx exists | FOUND |
 | Task 1 commit 74bc548 | FOUND |
 | Task 2 commit 8d9474b | FOUND |
+| Task 3 browser verification | APPROVED by user |
 | 17/17 tests GREEN | VERIFIED |
 | npm run build exits zero | VERIFIED |
+| All 5 browser checks | PASSED |
+
+## Self-Check: PASSED
