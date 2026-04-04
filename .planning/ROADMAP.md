@@ -66,7 +66,12 @@ Plans:
   3. Dark mode preference persists correctly across a full page refresh
   4. CSS variable palette for chart colors is defined under :root and html.dark — Recharts SVG elements receive color values via CSS variables, not hardcoded hex
   5. Shared UI primitives (Button, Card, Badge, Input, Select, Modal) render correctly in both light and dark themes
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 03-01-PLAN.md — Install packages, configure Tailwind v4 + dark mode CSS, add FOWT script, create RED test stubs (Wave 0)
+- [ ] 03-02-PLAN.md — Implement ThemeSync and all shared UI primitives: Button, Card, Badge, Input, Select, Modal (Wave 1)
+- [ ] 03-03-PLAN.md — Implement Header, Sidebar, AppLayout, page placeholders, App.tsx; browser verification checkpoint (Wave 2)
 
 ### Phase 4: Dashboard
 **Goal**: The primary evaluator landing view is complete — KPI summary cards, a time-series chart, a categorical spending chart, and an insights panel all read from live store data
@@ -116,7 +121,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete    | 2026-04-04 |
 | 2. State Layer | 4/4 | Complete   | 2026-04-04 |
-| 3. Layout Shell | 0/TBD | Not started | - |
+| 3. Layout Shell | 0/3 | Not started | - |
 | 4. Dashboard | 0/TBD | Not started | - |
 | 5. Transactions | 0/TBD | Not started | - |
 | 6. Polish | 0/TBD | Not started | - |
