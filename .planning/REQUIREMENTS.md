@@ -15,10 +15,10 @@
 
 ### Dashboard
 
-- [ ] **DASH-01**: User can see a summary panel with Total Balance, Total Income, and Total Expenses as KPI cards
-- [ ] **DASH-02**: User can see a time-series chart showing balance trend over time (at least 2 months of data visible)
-- [ ] **DASH-03**: User can see a categorical chart showing spending breakdown by category (pie or bar)
-- [ ] **DASH-04**: User can see an insights section showing: highest spending category, month-over-month comparison, and at least one additional observation
+- [x] **DASH-01**: User can see a summary panel with Total Balance, Total Income, and Total Expenses as KPI cards
+- [x] **DASH-02**: User can see a time-series chart showing balance trend over time (at least 2 months of data visible)
+- [x] **DASH-03**: User can see a categorical chart showing spending breakdown by category (pie or bar)
+- [x] **DASH-04**: User can see an insights section showing: highest spending category, month-over-month comparison, and at least one additional observation
 
 ### Transactions
 
@@ -85,10 +85,10 @@
 | FOUND-03 | Phase 1 | Complete |
 | FOUND-04 | Phase 2 | Complete |
 | FOUND-05 | Phase 2 | Complete |
-| DASH-01 | Phase 4 | Pending |
-| DASH-02 | Phase 4 | Pending |
-| DASH-03 | Phase 4 | Pending |
-| DASH-04 | Phase 4 | Pending |
+| DASH-01 | Phase 4 | Complete |
+| DASH-02 | Phase 4 | Complete |
+| DASH-03 | Phase 4 | Complete |
+| DASH-04 | Phase 4 | Complete |
 | TXN-01 | Phase 5 | Pending |
 | TXN-02 | Phase 5 | Pending |
 | TXN-03 | Phase 5 | Pending |
