@@ -135,5 +135,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 2. State Layer | 4/4 | Complete   | 2026-04-04 |
 | 3. Layout Shell | 3/3 | Complete   | 2026-04-04 |
 | 4. Dashboard | 4/4 | Complete   | 2026-04-04 |
-| 5. Transactions | 2/4 | In Progress|  |
+| 5. Transactions | 3/4 | In Progress|  |
 | 6. Polish | 0/TBD | Not started | - |

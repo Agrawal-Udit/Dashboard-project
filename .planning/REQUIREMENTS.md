@@ -23,10 +23,10 @@
 ### Transactions
 
 - [x] **TXN-01**: User can view a list of all transactions with date, amount, category, type (income/expense), and description
-- [ ] **TXN-02**: User can filter transactions by type (income / expense / all)
-- [ ] **TXN-03**: User can filter transactions by category (multi-select or single dropdown)
-- [ ] **TXN-04**: User can search transactions by description text
-- [ ] **TXN-05**: User can sort transactions by date, amount, or category
+- [x] **TXN-02**: User can filter transactions by type (income / expense / all)
+- [x] **TXN-03**: User can filter transactions by category (multi-select or single dropdown)
+- [x] **TXN-04**: User can search transactions by description text
+- [x] **TXN-05**: User can sort transactions by date, amount, or category
 - [x] **TXN-06**: Admin user can add a new transaction via a form (date, amount, category, type, description)
 - [x] **TXN-07**: Admin user can edit an existing transaction
 - [x] **TXN-08**: Viewer user cannot see add/edit controls (role-gated UI)
@@ -90,10 +90,10 @@
 | DASH-03 | Phase 4 | Complete |
 | DASH-04 | Phase 4 | Complete |
 | TXN-01 | Phase 5 | Complete |
-| TXN-02 | Phase 5 | Pending |
-| TXN-03 | Phase 5 | Pending |
-| TXN-04 | Phase 5 | Pending |
-| TXN-05 | Phase 5 | Pending |
+| TXN-02 | Phase 5 | Complete |
+| TXN-03 | Phase 5 | Complete |
+| TXN-04 | Phase 5 | Complete |
+| TXN-05 | Phase 5 | Complete |
 | TXN-06 | Phase 5 | Complete |
 | TXN-07 | Phase 5 | Complete |
 | TXN-08 | Phase 5 | Complete |
