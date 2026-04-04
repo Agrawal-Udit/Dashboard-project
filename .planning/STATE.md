@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 04-01-PLAN.md — 4 TDD stub files in RED state, 77 existing tests remain GREEN
-last_updated: "2026-04-04T18:37:47.211Z"
+stopped_at: Completed 04-02-PLAN.md — calcInsights, KpiCard, EmptyState implemented; 11 new tests GREEN
+last_updated: "2026-04-04T18:41:26.601Z"
 last_activity: "2026-04-04 — Plan 02-01 complete: Zustand+Immer installed, jsdom env enabled, 5 TDD test stub files in RED state"
 progress:
   total_phases: 6
   completed_phases: 3
   total_plans: 14
-  completed_plans: 11
+  completed_plans: 12
   percent: 17
 ---
 
@@ -60,6 +60,7 @@ Progress: [█░░░░░░░░░] 17%
 | Phase 03-layout-shell P02 | 4 | 2 tasks | 7 files |
 | Phase 03-layout-shell P03 | 2 | 2 tasks | 6 files |
 | Phase 04-dashboard P01 | 6 | 2 tasks | 4 files |
+| Phase 04-dashboard P02 | 2 | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -99,6 +100,8 @@ Recent decisions affecting current work:
 - [Phase 03-layout-shell]: Sidebar NavLink uses end={to==='/'} to prevent Dashboard always appearing active at /transactions
 - [Phase 03-layout-shell]: ThemeSync placed outside AppLayout but inside BrowserRouter to remain in React tree without affecting layout
 - [Phase 04-dashboard]: 04-01: src/components/dashboard/__tests__/ directory created; txn() helper uses Partial<Transaction> & { type } pattern; KpiCard colorClass test uses container.querySelector to avoid coupling to DOM structure
+- [Phase 04-dashboard]: 04-02: highestCategory.name uses raw category key (not getCategoryMeta().label) — test asserts 'housing' not 'Housing'
+- [Phase 04-dashboard]: 04-02: incomeExpenseRatio returns null (not 0) when totalExpenses === 0 — callers can distinguish no-data from zero ratio
 
 ### Pending Todos
 
@@ -112,6 +115,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-04T18:37:47.206Z
-Stopped at: Completed 04-01-PLAN.md — 4 TDD stub files in RED state, 77 existing tests remain GREEN
+Last session: 2026-04-04T18:41:26.596Z
+Stopped at: Completed 04-02-PLAN.md — calcInsights, KpiCard, EmptyState implemented; 11 new tests GREEN
 Resume file: None
