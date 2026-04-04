@@ -36,7 +36,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 Plans:
 - [x] 01-01-PLAN.md — Vite scaffold, test infra, and failing test stubs (Wave 0 — RED state)
 - [x] 01-02-PLAN.md — Transaction type, Category constants, and 25-30 seed transactions
-- [ ] 01-03-PLAN.md — Pure utility functions: formatCurrency, formatDate, calcTotals, groupByCategory, formatChartData
+- [x] 01-03-PLAN.md — Pure utility functions: formatCurrency, formatDate, calcTotals, groupByCategory, formatChartData
 
 ### Phase 2: State Layer
 **Goal**: All application state is owned by Zustand slices with persist middleware configured correctly from day one — components can subscribe to transactions, role, and dark mode without importing raw store state
@@ -48,7 +48,13 @@ Plans:
   3. Persist middleware is configured with version: 1, partialize (excluding action functions), and a migrate function — localStorage schema is stable
   4. Selected role persists correctly across a full page refresh (observable in browser)
   5. useTransactions and useSummaryTotals selector hooks return filtered/sorted and aggregated data respectively, derived from store state via useMemo
-**Plans**: TBD
+**Plans**: 4 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — Install zustand+immer, update vitest config to jsdom, write all failing test stubs (Wave 0 — RED state)
+- [ ] 02-02-PLAN.md — Implement txnSlice.ts and uiSlice.ts StateCreator functions
+- [ ] 02-03-PLAN.md — Implement store.ts with persist middleware and selector hooks (useTransactions, useSummaryTotals)
+- [ ] 02-04-PLAN.md — Manual browser verification: role persists across page refresh (ROLE-02)
 
 ### Phase 3: Layout Shell
 **Goal**: A complete app frame exists — header with role switcher and dark toggle, sidebar navigation, shared UI primitives, and the CSS variable color palette for charts — ready for feature pages to slot in
@@ -109,7 +115,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete    | 2026-04-04 |
-| 2. State Layer | 0/TBD | Not started | - |
+| 2. State Layer | 0/4 | Not started | - |
 | 3. Layout Shell | 0/TBD | Not started | - |
 | 4. Dashboard | 0/TBD | Not started | - |
 | 5. Transactions | 0/TBD | Not started | - |
