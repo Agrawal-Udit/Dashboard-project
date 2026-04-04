@@ -34,8 +34,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Vite scaffold, test infra, and failing test stubs (Wave 0 — RED state)
-- [ ] 01-02-PLAN.md — Transaction type, Category constants, and 25-30 seed transactions
+- [x] 01-01-PLAN.md — Vite scaffold, test infra, and failing test stubs (Wave 0 — RED state)
+- [x] 01-02-PLAN.md — Transaction type, Category constants, and 25-30 seed transactions
 - [ ] 01-03-PLAN.md — Pure utility functions: formatCurrency, formatDate, calcTotals, groupByCategory, formatChartData
 
 ### Phase 2: State Layer
@@ -108,7 +108,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 1/3 | In Progress|  |
+| 1. Foundation | 2/3 | In Progress|  |
 | 2. State Layer | 0/TBD | Not started | - |
 | 3. Layout Shell | 0/TBD | Not started | - |
 | 4. Dashboard | 0/TBD | Not started | - |

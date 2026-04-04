@@ -10,8 +10,8 @@ progress:
   total_phases: 6
   completed_phases: 0
   total_plans: 3
-  completed_plans: 1
-  percent: 33
+  completed_plans: 2
+  percent: 67
 ---
 
 # Project State
@@ -26,28 +26,28 @@ See: .planning/PROJECT.md (updated 2026-04-03)
 ## Current Position
 
 Phase: 1 of 6 (Foundation)
-Plan: 1 of 3 in current phase
+Plan: 2 of 3 in current phase
 Status: In progress
-Last activity: 2026-04-04 — Plan 01-01 complete: Vite scaffold + failing test stubs
+Last activity: 2026-04-04 — Plan 01-02 complete: Transaction type contract, Category constants, 28 seed transactions
 
-Progress: [███░░░░░░░] 33%
+Progress: [██████░░░░] 67%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: 25 min
-- Total execution time: 0.4 hours
+- Total plans completed: 2
+- Average duration: 13.5 min
+- Total execution time: 0.45 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 1. Foundation | 1 | 25 min | 25 min |
+| 1. Foundation | 2 | 27 min | 13.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (25 min)
-- Trend: N/A (first plan)
+- Last 5 plans: 01-01 (25 min), 01-02 (2 min)
+- Trend: Fast execution — data contract plans execute quickly when types are pre-specified
 
 *Updated after each plan completion*
 
@@ -64,6 +64,9 @@ Recent decisions affecting current work:
 - 01-01: @rolldown/binding-win32-x64-msvc must be installed explicitly on Node 22.9 (optional dep npm bug)
 - 01-01: Test files excluded from tsconfig.app.json build scope to support intentional RED TDD state
 - 01-01: Vitest configured with environment:node for pure function tests (no jsdom until Phase 3)
+- 01-02: String literal unions used for TransactionType and Category (no enums — JSON round-trip safety)
+- 01-02: MOCK_TRANSACTIONS uses fixed ids txn-001 through txn-028 (deterministic for test stability)
+- 01-02: amount field always positive — sign semantics live in type field ('income'|'expense')
 
 ### Pending Todos
 
@@ -78,5 +81,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-04-04
-Stopped at: Completed 01-01-PLAN.md — Vite scaffold + failing test stubs (RED state verified)
+Stopped at: Completed 01-02-PLAN.md — Transaction types, Category constants, 28 seed transactions (mockData tests GREEN)
 Resume file: None
