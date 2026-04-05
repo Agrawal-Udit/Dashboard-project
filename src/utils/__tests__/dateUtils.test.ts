@@ -2,24 +2,24 @@ import { describe, it, expect } from 'vitest'
 import { formatCurrency, formatDate } from '../dateUtils'
 
 describe('formatCurrency', () => {
-  it('returns "$0.00" for 0', () => {
-    expect(formatCurrency(0)).toBe('$0.00')
+  it('returns "₹0.00" for 0', () => {
+    expect(formatCurrency(0)).toBe('₹0.00')
   })
 
-  it('returns "-$150.00" for -150', () => {
-    expect(formatCurrency(-150)).toBe('-$150.00')
+  it('returns "-₹150.00" for -150', () => {
+    expect(formatCurrency(-150)).toBe('-₹150.00')
   })
 
-  it('returns "$0.00" for null (no throw)', () => {
-    expect(formatCurrency(null as unknown as number)).toBe('$0.00')
+  it('returns "₹0.00" for null (no throw)', () => {
+    expect(formatCurrency(null as unknown as number)).toBe('₹0.00')
   })
 
-  it('returns "$0.00" for undefined (no throw)', () => {
-    expect(formatCurrency(undefined as unknown as number)).toBe('$0.00')
+  it('returns "₹0.00" for undefined (no throw)', () => {
+    expect(formatCurrency(undefined as unknown as number)).toBe('₹0.00')
   })
 
-  it('returns "$1,234.56" for 1234.56', () => {
-    expect(formatCurrency(1234.56)).toBe('$1,234.56')
+  it('returns "₹1,234.56" for 1234.56', () => {
+    expect(formatCurrency(1234.56)).toBe('₹1,234.56')
   })
 })
 

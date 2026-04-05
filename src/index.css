@@ -1,47 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
 
-/* CRITICAL: Must be the second declaration or dark: utilities never activate.
-   This enables dark: variant for any element that is inside html.dark. */
+/* Enable dark mode variant */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Chart color palette — resolved at paint time by both React and SVG.
-   All Recharts cell/bar/line fill props reference these via var(). */
+/* Professional color palette with indigo, blue, and cyan accents */
 :root {
-  --chart-color-1: #6366f1;    /* indigo  — housing */
-  --chart-color-2: #f59e0b;    /* amber   — food */
-  --chart-color-3: #10b981;    /* emerald — transport */
-  --chart-color-4: #3b82f6;    /* blue    — utilities */
-  --chart-color-5: #ec4899;    /* pink    — entertainment */
-  --chart-color-6: #ef4444;    /* red     — healthcare */
-  --chart-color-7: #8b5cf6;    /* violet  — education */
-  --chart-color-8: #22c55e;    /* green   — salary */
-  --chart-color-9: #14b8a6;    /* teal    — freelance */
-  --chart-color-10: #f97316;   /* orange  — investment */
-  --chart-color-11: #94a3b8;   /* slate   — other */
+  --chart-color-1: #3b82f6;
+  --chart-color-2: #8b5cf6;
+  --chart-color-3: #06b6d4;
+  --chart-color-4: #10b981;
+  --chart-color-5: #f59e0b;
+  --chart-color-6: #ec4899;
+  --chart-color-7: #6366f1;
+  --chart-color-8: #14b8a6;
+  --chart-color-9: #22c55e;
+  --chart-color-10: #f97316;
+  --chart-color-11: #a855f7;
+
+  --recharts-tick-color: #71717a;
+  --recharts-grid-color: #e4e4e7;
+  --glass-bg: rgba(255, 255, 255, 0.95);
+  --glass-border: rgba(161, 161, 170, 0.35);
+
+  --finrise-accent-1: #6366f1;
+  --finrise-accent-2: #3b82f6;
+  --finrise-accent-3: #06b6d4;
+  --finrise-accent-1-hover: #818cf8;
+  --finrise-accent-2-hover: #60a5fa;
+  --finrise-accent-3-hover: #22d3ee;
 }
 
-/* Dark palette — use html.dark selector (not just .dark) because :root IS <html>.
-   When ThemeSync toggles document.documentElement.classList, these variables activate. */
 html.dark {
-  --chart-color-1: #818cf8;
-  --chart-color-2: #fcd34d;
-  --chart-color-3: #34d399;
-  --chart-color-4: #60a5fa;
-  --chart-color-5: #f472b6;
-  --chart-color-6: #f87171;
-  --chart-color-7: #a78bfa;
-  --chart-color-8: #4ade80;
-  --chart-color-9: #2dd4bf;
+  --chart-color-1: #60a5fa;
+  --chart-color-2: #a78bfa;
+  --chart-color-3: #22d3ee;
+  --chart-color-4: #34d399;
+  --chart-color-5: #fbbf24;
+  --chart-color-6: #f472b6;
+  --chart-color-7: #818cf8;
+  --chart-color-8: #2dd4bf;
+  --chart-color-9: #4ade80;
   --chart-color-10: #fb923c;
-  --chart-color-11: #cbd5e1;
+  --chart-color-11: #c084fc;
+
+  --recharts-tick-color: #a1a1aa;
+  --recharts-grid-color: #3f3f46;
+  --glass-bg: rgba(24, 24, 27, 0.92);
+  --glass-border: rgba(113, 113, 122, 0.5);
+
+  --finrise-accent-1: #818cf8;
+  --finrise-accent-2: #60a5fa;
+  --finrise-accent-3: #22d3ee;
+  --finrise-accent-1-hover: #a5b4fc;
+  --finrise-accent-2-hover: #93c5fd;
+  --finrise-accent-3-hover: #67e8f9;
 }
 
-/* Recharts axis and grid — SVG inline attr resolved via CSS variable */
-:root {
-  --recharts-tick-color: #6b7280;
-  --recharts-grid-color: #e5e7eb;
+/* Clean scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
-html.dark {
-  --recharts-tick-color: #9ca3af;
-  --recharts-grid-color: #374151;
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 3px;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+}
+
+/* Apply Inter font globally */
+body {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+.finrise-accent-gradient {
+  background-image: linear-gradient(
+    90deg,
+    var(--finrise-accent-1) 0%,
+    var(--finrise-accent-2) 52%,
+    var(--finrise-accent-3) 100%
+  );
+}
+
+.finrise-accent-gradient-hover {
+  transition: filter 0.18s ease;
+}
+
+.finrise-accent-gradient-hover:hover {
+  filter: brightness(1.08);
+}
+
+.finrise-accent-soft {
+  border: 1px solid rgba(99, 102, 241, 0.18);
+  background: linear-gradient(
+    140deg,
+    rgba(99, 102, 241, 0.1) 0%,
+    rgba(6, 182, 212, 0.1) 100%
+  );
+}
+
+html.dark .finrise-accent-soft {
+  border-color: rgba(129, 140, 248, 0.28);
+  background: linear-gradient(
+    140deg,
+    rgba(67, 56, 202, 0.28) 0%,
+    rgba(8, 145, 178, 0.24) 100%
+  );
+}
+
+.finrise-accent-card {
+  border: 1px solid rgba(99, 102, 241, 0.22);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(99, 102, 241, 0.09) 50%,
+    rgba(6, 182, 212, 0.08) 100%
+  );
+}
+
+html.dark .finrise-accent-card {
+  border-color: rgba(129, 140, 248, 0.28);
+  background: linear-gradient(
+    145deg,
+    rgba(24, 24, 27, 0.92) 0%,
+    rgba(49, 46, 129, 0.4) 50%,
+    rgba(8, 145, 178, 0.3) 100%
+  );
+}
+
+.finrise-auth-bg {
+  background:
+    radial-gradient(
+      1200px 620px at 8% -5%,
+      rgba(99, 102, 241, 0.32),
+      transparent 58%
+    ),
+    radial-gradient(
+      980px 540px at 92% 0%,
+      rgba(6, 182, 212, 0.26),
+      transparent 58%
+    ),
+    radial-gradient(
+      700px 420px at 40% 105%,
+      rgba(56, 189, 248, 0.18),
+      transparent 62%
+    ),
+    linear-gradient(140deg, #050816 0%, #0a1024 42%, #111833 100%);
+}
+
+.finrise-auth-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: radial-gradient(circle at center, black 22%, transparent 78%);
+  pointer-events: none;
+}
+
+.finrise-glass {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: linear-gradient(
+    140deg,
+    rgba(255, 255, 255, 0.14),
+    rgba(255, 255, 255, 0.05)
+  );
+  box-shadow:
+    0 24px 60px rgba(2, 6, 23, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(18px);
+}
+
+.finrise-surface {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    radial-gradient(
+      140% 220% at 0% 0%,
+      rgba(129, 140, 248, 0.14),
+      transparent 50%
+    ),
+    linear-gradient(160deg, #0b1024 0%, #111734 46%, #0b0f22 100%);
+  box-shadow: 0 22px 60px rgba(2, 6, 23, 0.45);
+}
+
+.finrise-panel {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(
+    170deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.04)
+  );
+  box-shadow:
+    0 18px 40px rgba(2, 6, 23, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(20px);
+}
+
+.finrise-badge {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
 }

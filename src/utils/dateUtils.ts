@@ -1,18 +1,18 @@
 import { format, parseISO, isValid } from 'date-fns';
 
 /**
- * Formats a number as a USD currency string.
+ * Formats a number as an INR currency string.
  * Accepts null/undefined — both coerce to 0 via nullish coalescing (no throw).
  * Uses Intl.NumberFormat for correct locale formatting:
- *   - 0 → "$0.00"
- *   - -150 → "-$150.00"
- *   - 1234.56 → "$1,234.56"
+ *   - 0 → "₹0.00"
+ *   - -150 → "-₹150.00"
+ *   - 1234.56 → "₹1,234.56"
  */
 export function formatCurrency(amount: number | null | undefined): string {
   const value = amount ?? 0;
-  return new Intl.NumberFormat('en-US', {
+  return new Intl.NumberFormat('en-IN', {
     style: 'currency',
-    currency: 'USD',
+    currency: 'INR',
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   }).format(value);

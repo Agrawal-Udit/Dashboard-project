@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 05-04-PLAN.md — all 8 TXN requirements human-verified, Phase 5 complete
-last_updated: "2026-04-04T21:07:40.498Z"
-last_activity: "2026-04-04 — Plan 02-01 complete: Zustand+Immer installed, jsdom env enabled, 5 TDD test stub files in RED state"
+stopped_at: "Completed 06-03-PLAN.md — reduced-motion animations and KPI empty-state messaging implemented"
+last_updated: "2026-04-05T12:53:00.000Z"
+last_activity: "2026-04-05 — 06-03 complete; full suite green (121/121) and typecheck clean"
 progress:
   total_phases: 6
   completed_phases: 5
-  total_plans: 18
-  completed_plans: 18
-  percent: 17
+  total_plans: 22
+  completed_plans: 21
+  percent: 95
 ---
 
 # Project State
@@ -21,36 +21,38 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-03)
 
 **Core value:** Users can instantly understand their financial picture and explore transactions with filtering, all within a polished, responsive UI that demonstrates strong frontend craft.
-**Current focus:** Phase 1 — Foundation
+**Current focus:** Phase 6 — Polish (execution in progress)
 
 ## Current Position
 
-Phase: 2 of 6 (State Layer)
-Plan: 1 of 3 in current phase
+Phase: 6 of 6 (Polish)
+Plan: 3 of 4 complete (next: 06-04)
 Status: In progress
-Last activity: 2026-04-04 — Plan 02-01 complete: Zustand+Immer installed, jsdom env enabled, 5 TDD test stub files in RED state
+Last activity: 2026-04-05 — 06-03 completed with reduced-motion surfaces and KPI empty states
 
-Progress: [█░░░░░░░░░] 17%
+Progress: [█████████▓] 95%
 
 ## Performance Metrics
 
 **Velocity:**
+
 - Total plans completed: 2
 - Average duration: 13.5 min
 - Total execution time: 0.45 hours
 
 **By Phase:**
 
-| Phase | Plans | Total | Avg/Plan |
-|-------|-------|-------|----------|
-| 1. Foundation | 3 | 27 min | 9 min |
-| 2. State Layer | 1 | 3 min | 3 min |
+| Phase          | Plans | Total  | Avg/Plan |
+| -------------- | ----- | ------ | -------- |
+| 1. Foundation  | 3     | 27 min | 9 min    |
+| 2. State Layer | 1     | 3 min  | 3 min    |
 
 **Recent Trend:**
+
 - Last 5 plans: 01-01 (25 min), 01-02 (2 min), 01-03 (unknown), 02-01 (3 min)
 - Trend: Fast execution — setup and TDD stub plans execute quickly
 
-*Updated after each plan completion*
+_Updated after each plan completion_
 | Phase 01 P03 | 3 | 2 tasks | 2 files |
 | Phase 02 P01 | 3 | 3 tasks | 7 files |
 | Phase 02-state-layer P02 | 2 | 2 tasks | 2 files |
@@ -67,6 +69,9 @@ Progress: [█░░░░░░░░░] 17%
 | Phase 05-transactions P02 | 2 | 2 tasks | 2 files |
 | Phase 05-transactions P03 | 2 | 3 tasks | 3 files |
 | Phase 05-transactions P04 | 25 | 2 tasks | 1 files |
+| Phase 06-polish P01 | 8 | 2 tasks | 5 files |
+| Phase 06-polish P02 | 7 | 2 tasks | 3 files |
+| Phase 06-polish P03 | 12 | 2 tasks | 8 files |
 
 ## Accumulated Context
 
@@ -105,7 +110,7 @@ Recent decisions affecting current work:
 - [Phase 03-layout-shell]: Header uses four separate useAppStore selector calls to match test mock per-call interception pattern
 - [Phase 03-layout-shell]: Sidebar NavLink uses end={to==='/'} to prevent Dashboard always appearing active at /transactions
 - [Phase 03-layout-shell]: ThemeSync placed outside AppLayout but inside BrowserRouter to remain in React tree without affecting layout
-- [Phase 04-dashboard]: 04-01: src/components/dashboard/__tests__/ directory created; txn() helper uses Partial<Transaction> & { type } pattern; KpiCard colorClass test uses container.querySelector to avoid coupling to DOM structure
+- [Phase 04-dashboard]: 04-01: src/components/dashboard/**tests**/ directory created; txn() helper uses Partial<Transaction> & { type } pattern; KpiCard colorClass test uses container.querySelector to avoid coupling to DOM structure
 - [Phase 04-dashboard]: 04-02: highestCategory.name uses raw category key (not getCategoryMeta().label) — test asserts 'housing' not 'Housing'
 - [Phase 04-dashboard]: 04-02: incomeExpenseRatio returns null (not 0) when totalExpenses === 0 — callers can distinguish no-data from zero ratio
 - [Phase 04-dashboard]: useMemo computes cumulative balance from per-month net — not passed directly to Recharts; Cell fill uses CSS variables for dark mode support
@@ -139,5 +144,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-04-04T20:18:24.051Z
-Stopped at: Completed 05-04-PLAN.md — all 8 TXN requirements human-verified, Phase 5 complete
+Stopped at: Completed 06-03-PLAN.md — reduced-motion animations and KPI empty-state messaging implemented
 Resume file: None

@@ -1,44 +1,53 @@
-import { useState } from 'react'
-import { Header } from './Header'
-import { Sidebar } from './Sidebar'
+import { useState } from "react";
+import { motion, AnimatePresence, useReducedMotion } from "motion/react";
+import { Header } from "./Header";
+import { Sidebar } from "./Sidebar";
 
 interface AppLayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export function AppLayout({ children }: AppLayoutProps) {
-  const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const shouldReduceMotion = useReducedMotion() ?? false;
 
   return (
-    <div className="flex min-h-screen bg-gray-50 dark:bg-gray-950">
-      {/* Sidebar: fixed on mobile (slides in), static on md+ */}
+    <div className="flex min-h-screen min-w-0 bg-white dark:bg-zinc-950">
+      {/* Sidebar */}
       <aside
-        className={`fixed inset-y-0 left-0 z-40 w-64 flex-col border-r border-gray-200 bg-white transition-transform dark:border-gray-700 dark:bg-gray-900 md:static md:flex md:translate-x-0 ${
-          sidebarOpen ? 'flex translate-x-0' : '-translate-x-full hidden md:flex'
+        className={`fixed inset-y-0 left-0 z-40 w-64 flex-col border-r border-zinc-200 bg-white transition-transform dark:border-zinc-800 dark:bg-zinc-950 md:static md:flex md:translate-x-0 ${
+          sidebarOpen
+            ? "flex translate-x-0"
+            : "-translate-x-full hidden md:flex"
         }`}
       >
-        <div className="flex h-16 items-center border-b border-gray-200 px-4 dark:border-gray-700">
-          <span className="text-lg font-semibold text-gray-900 dark:text-gray-100">Finance</span>
-        </div>
         <Sidebar onNavigate={() => setSidebarOpen(false)} />
       </aside>
 
       {/* Mobile overlay */}
-      {sidebarOpen && (
-        <div
-          className="fixed inset-0 z-30 bg-black/50 md:hidden"
-          onClick={() => setSidebarOpen(false)}
-          aria-hidden="true"
-        />
-      )}
+      <AnimatePresence>
+        {sidebarOpen && (
+          <motion.div
+            className="fixed inset-0 z-30 bg-black/20 md:hidden"
+            onClick={() => setSidebarOpen(false)}
+            aria-hidden="true"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={
+              shouldReduceMotion ? { duration: 0 } : { duration: 0.2 }
+            }
+          />
+        )}
+      </AnimatePresence>
 
-      {/* Main area: header + page content */}
-      <div className="flex flex-1 flex-col overflow-hidden">
+      {/* Main area */}
+      <div className="relative flex min-w-0 flex-1 flex-col overflow-hidden">
         <Header onMenuClick={() => setSidebarOpen((prev) => !prev)} />
-        <main className="flex-1 overflow-auto p-4 md:p-6">
+        <main className="min-w-0 flex-1 overflow-auto bg-zinc-50 p-6 dark:bg-zinc-900 lg:p-8">
           {children}
         </main>
       </div>
     </div>
-  )
+  );
 }

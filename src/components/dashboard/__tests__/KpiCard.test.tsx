@@ -14,7 +14,7 @@ describe('KpiCard', () => {
     expect(screen.getByText('Total Balance')).toBeDefined()
   })
 
-  it('renders formatted currency value for 1234.56 as "$1,234.56"', () => {
+  it('renders formatted currency value for 1234.56 as "₹1,234.56"', () => {
     render(
       <KpiCard
         label="Income"
@@ -22,10 +22,10 @@ describe('KpiCard', () => {
         icon={<span data-testid="icon" />}
       />
     )
-    expect(screen.getByText('$1,234.56')).toBeDefined()
+    expect(screen.getByText('₹1,234.56')).toBeDefined()
   })
 
-  it('renders "$0.00" when value is 0', () => {
+  it('renders "₹0.00" when value is 0', () => {
     render(
       <KpiCard
         label="Expenses"
@@ -33,7 +33,7 @@ describe('KpiCard', () => {
         icon={<span data-testid="icon" />}
       />
     )
-    expect(screen.getByText('$0.00')).toBeDefined()
+    expect(screen.getByText('₹0.00')).toBeDefined()
   })
 
   it('applies colorClass to the icon wrapper when provided', () => {
